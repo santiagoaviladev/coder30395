@@ -1,0 +1,8 @@
+
+// console.log
+
+
+//prompt
+
+
+//alert
