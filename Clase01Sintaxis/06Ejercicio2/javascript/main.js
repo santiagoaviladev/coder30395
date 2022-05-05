@@ -19,3 +19,12 @@
 
 
 */
+
+ let num1 = Number(prompt("Escrib un numero"));
+ let num2 = Number(prompt("Escriba otro numero"));
+
+ let suma = num1+num2;
+ let mul = num1*num2;
+
+ alert ("La multiplicacion es:"+mul);
+ console.log("La suma es:", suma);
