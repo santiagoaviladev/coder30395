@@ -26,5 +26,5 @@
  let suma = num1+num2;
  let mul = num1*num2;
 
- alert ("La multiplicacion es:"+mul);
- console.log("La suma es:", suma);
+ alert ("La multiplicación es: "+mul);
+ console.log("La suma es:"+suma);
