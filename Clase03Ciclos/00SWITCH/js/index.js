@@ -26,6 +26,43 @@
     }
     else
     {
+        switch(operacion)
+        {
+            case "SUMA": // if(operacion == "SUMA")
+            {
+                console.log("LA SUMA ES: "+ (numero1+numero2));
+                break;
+            }
+            case "MUL":
+            {
+                    console.log("LA MUL ES: "+ (numero1*numero2));
+                    break;
+            }
+            case "RESTA":
+            {
+                console.log("LA RESTA ES: "+ (numero1-numero2));
+                break;
+            }
+            case "DIV":
+            {
+
+                if(numero2===0)
+                {
+                     alert("NO PUEDO DIVIDIR POR 0");
+                }
+                else
+                {
+                    console.log("LA DIV ES: "+ (numero1/numero2));
+                } 
+                break;
+            }
+            default: // else final
+            {
+                console.log("OPERACION INVÁLIDA");
+                break;
+            }
+        }
+        /*
         if(operacion==="SUMA")
         {
            console.log("LA SUMA ES: "+ (numero1+numero2));
@@ -47,11 +84,10 @@
         else
         {
             console.log("LA DIV ES: "+ (numero1/numero2));
-        }
-
+        } 
     }
         else 
         {
             console.log("OPERACION INVÁLIDA");
-        }
+        }*/
     }
