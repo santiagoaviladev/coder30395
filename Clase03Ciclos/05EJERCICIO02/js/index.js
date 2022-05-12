@@ -13,7 +13,43 @@
  * El menor peso
  * El peso promedio de los paquetes
 
-
-
-
 */
+
+/*
+    1. Pedirle al usuario el número de paquetes.
+    2. Hasta que el usuario NO haya ingresado el peso de 
+        TODOS LOS PAQUETES: 
+        Pedirle al usuario, el peso de los paquetes
+    3. Calcular mayor, menor y promedio
+*/
+
+ let numPaquetes =  Number(prompt("Ingrese el numero de paquetes"));
+ let mayor = 0;
+ let menor = 0;
+ let pesoPaquetes = 0;
+
+
+ for(let i=1; i<=numPaquetes; i++)
+ {
+    const pesoActual = Number(prompt("Ingrese el peso del paquete: "+(i)));
+    pesoPaquetes += pesoActual;
+    if(pesoActual>mayor)
+    {
+        mayor=pesoActual;
+    }
+    
+    if(i==1)
+    {
+        menor = pesoActual;
+    }
+
+    if(menor>pesoActual)
+    {
+        menor=pesoActual;
+    }
+    
+ }
+
+ console.log("PROMEDIO ES IGUAL: "+ pesoPaquetes/numPaquetes);
+ console.log("MAYOR ES IGUAL: "+ mayor);
+ console.log("MENOR ES IGUAL: "+ menor);
