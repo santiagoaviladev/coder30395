@@ -12,10 +12,11 @@
     B. El usuario no ingresa datos válidos para operar
     C. El usuario ingresa un '0' como segundo operando para la división
 */
-
+   
   function mostrarMenu()
   {
       let opcion = 0;
+      
       while(opcion!==5)
       {
           opcion = Number(prompt(`Ingrese una opción: 
@@ -24,22 +25,34 @@
                                  3. MUL
                                  4. DIV
                                  5. FIN`));
+        let a =0;
+        let b=0;
+        if(opcion===1 || opcion===2 || opcion===3 || opcion===4)
+        {
+          a = Number(prompt("Ingrese un numero"));
+          b = Number(prompt("Ingrese otro numero"));
+        } 
+
           switch(opcion)
           {
-              case 1:{
-                sumar();
+            
+            case 1:{
+                
+                sumar(a, b);
                 break;
               }
               case 2:{
-                restar();
+
+                restar(a, b);
                 break;
               }
               case 3:{
-                multiplicar();
+                multiplicar(a, b);
                 break;
               }
               case 4:{
-                 dividir();
+                let res =dividir(a, b);
+                alert("DIV " +res);
                   break;
               }
               case 5:{
@@ -54,3 +67,27 @@
           }
       }
   }
+
+  // Créditos a Lucas Kripper
+  function sumar(a,b)
+  {
+      alert("La suma es "+ (a+b));
+  }
+
+  function restar(a,b)
+  {
+    alert("La resta es "+(a-b));
+  }
+  function multiplicar(a,b)
+  {
+    alert("La  multiplciacion es "+(a*b));
+  }
+  function dividir(a,b)
+  {
+      let resultado = a/b;
+      return resultado;
+  }
+
+
+  /*BLOQUE PRINICPAL */
+  mostrarMenu();
