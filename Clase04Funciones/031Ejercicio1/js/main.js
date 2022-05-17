@@ -63,7 +63,7 @@
               {
                   alert("Ingrese una opción válida")
                   break;
-              }
+              } 
           }
       }
   }
