@@ -12,3 +12,45 @@
     B. El usuario no ingresa datos válidos para operar
     C. El usuario ingresa un '0' como segundo operando para la división
 */
+
+  function mostrarMenu()
+  {
+      let opcion = 0;
+      while(opcion!==5)
+      {
+          opcion = Number(prompt(`Ingrese una opción: 
+                                 1. SUMA
+                                 2. RESTA
+                                 3. MUL
+                                 4. DIV
+                                 5. FIN`));
+          switch(opcion)
+          {
+              case 1:{
+                sumar();
+                break;
+              }
+              case 2:{
+                restar();
+                break;
+              }
+              case 3:{
+                multiplicar();
+                break;
+              }
+              case 4:{
+                 dividir();
+                  break;
+              }
+              case 5:{
+                alert("Gracias por usar nuestros servicios")
+                break;
+              }
+              default: 
+              {
+                  alert("Ingrese una opción válida")
+                  break;
+              }
+          }
+      }
+  }
