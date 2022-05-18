@@ -1,0 +1,2 @@
+
+//Constructor con funciones
