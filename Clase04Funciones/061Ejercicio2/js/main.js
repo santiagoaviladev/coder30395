@@ -26,3 +26,73 @@
     
 
 */
+
+  mostrarMenu();
+
+  function mostrarMenu()
+  {
+     let opcion = 0;
+     while(opcion!==3)
+    {
+        opcion = Number(prompt(`Ingrese una opcion:
+                                1. Mate (1 peso)
+                                2. Café (2 pesos)
+                                3. Fin`));
+       
+        switch(opcion)
+        {
+            case 1: 
+            {
+                venderMate();
+                break;
+            }
+            case 2:
+            {
+                venderCafe();
+                break;
+            }
+            case 3: 
+            {
+                alert("Gracias");
+                break;
+            }
+            default:
+                {
+                    alert("Opcion Invalida");
+                    break;
+                }
+
+        }
+    }
+
+  }
+
+
+  function venderMate(){
+
+     cobrar(1);
+     alert("Gracias por su compra de MATE")
+
+  }
+
+  function venderCafe(){
+
+    cobrar(2);
+    alert("Gracias por su compra de CAFE")
+
+ }
+
+ function cobrar(valorDelProducto)
+ {
+    let dineroIngresado = 0;
+
+    while(dineroIngresado<valorDelProducto){
+        
+        dineroIngresado+=Number(prompt(`El valor de su compra es ${valorDelProducto}
+        Ingrese dinero:`));
+
+
+    }
+
+    alert(`Su cambio es: ${dineroIngresado-valorDelProducto}`)
+ }
