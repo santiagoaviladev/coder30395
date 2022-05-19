@@ -10,4 +10,14 @@
       usando el objeto creado.
   */
  
-    
+    function Empleado(nombre,apellido)
+    {
+      this.nombre= nombre;
+      this.apellido=apellido;
+    }
+
+    const nombre = prompt("Ingrese el nombre del empleado");
+    const apellido = prompt("Ingrese el apellido del empleado");
+
+    const empleado = new Empleado(nombre, apellido);
+    console.log(empleado);

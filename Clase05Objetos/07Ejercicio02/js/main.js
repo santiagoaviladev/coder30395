@@ -1,15 +1,19 @@
  
   /*
-    Cree el modelo para un carrito de compras, 
+    Cree el modelo para un juego de UNO, 
     que contenga los siguientes elementos: 
-    1. Producto (id, nombre, precio y una función que calcule el iva)
-    2. Persona (id, rol [Debe ser de tipo Rol], nombre, apellido y 
-      una función que retorne el nombre y el apellido en una sola cadena)
-    3. Rol (id, nombre)
-    4. Compra (producto[Debe ser de tipo Producto], 
-      persona[Debe ser de tipo Persona])
+    1. Carta (id,  numero, valor, accion)
+    2. Jugador (id, alias, cartasEnMano)
+    3. Juego (id, cartasEnMesa, CartasEnMazo, jugadores)
 
-    simule una compra usando los constructores e imprimala en consola
+    Escriba una función que le permita 'inicializar' el mazo de cartas. 
+    Es decir, crear todas las cartas disponibles en el juego: 
+    8 cartas 'toma 2'
+    8 cartas 'reverse'
+    8 cartas 'salte' 
+    4 cartas 'cambie de color'
+    4 cartas 'toma 4'
+    8 cartas (1-8) para cada color
   
   */
   
