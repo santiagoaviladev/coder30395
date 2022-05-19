@@ -17,6 +17,7 @@
   
   */
 
+  // Constructor de la clase Carta
   function Carta(id, valor, color, tipo)
         {
             this.id=id;
@@ -79,6 +80,7 @@ class Tipo {
   const cambiaColor = new Tipo(4, "cambio de color");
   const normal = new Tipo(5, "normal");
 
+  
   const colores = [azul, rojo, amarillo, verde];
   const mazo = [];
 
