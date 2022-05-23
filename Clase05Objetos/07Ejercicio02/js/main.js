@@ -82,15 +82,11 @@ class Tipo {
 
   
   const colores = [azul, rojo, amarillo, verde];
+  const tipos = [tomaDos, reverse, salte, tomaCuatro,cambiaColor,normal];
   const mazo = [];
+  let idCarta=0;
 
-  for(let i=0;i<colores.length;i++)
-  {
-    const carta = new Carta(i,-1,colores[i],"toma2");
-    const carta2 = new Carta(i+4,-1,colores[i],"toma2");
-    mazo.push(carta);
-    mazo.push(carta2);
-  }
+
 
   console.log(mazo);
   
