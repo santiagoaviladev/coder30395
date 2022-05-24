@@ -77,7 +77,7 @@ else{
 
 
 //includes
-mascotaParaBuscar = prompt("Ingrese su mascota");
+mascotaParaBuscar = prompt("Ingrese su mascota"); // busca un elemento y devuelve true o false
 const esta = otrosPerros.includes(mascotaParaBuscar);
 if(esta)
 {
@@ -89,5 +89,5 @@ else{
 
 
 //reverse
-mascotas.reverse();
+mascotas.reverse(); // invierte el array
 console.log(mascotas);

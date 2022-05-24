@@ -1,8 +1,53 @@
-/* Agrege al sistema para JUGAR UNO: 
 
- 1. Una opción para que el sistema cree los jugadores de forma aleatoria
-    Un jugador debe tener: id, nickname, cartasEnMano
- 2. Una opción para borrar un jugador dado su id
- 3. Una opción para que el sistema reparta las cartas (7 para cada Jugador)
- 4. Una clase para que manejar el estado del juego
-    */
+ /* 
+   Ingresar usuarios en un sistema
+ */
+
+ const usuarios = [
+    {id:0, nombre:"Natalia", apellido:"Chiara"},
+    {id:1, nombre:"Edgar", apellido:"Aranda"},
+    {id:2, nombre:"Diego", apellido:"Del Hoyo"},
+    {id:3, nombre:"Nicolás", apellido:"Santa Cruz"},
+    {id:4, nombre:"Marcelo", apellido:"Gallardo"},
+ ];
+
+ const usuariosSimple = [
+  "Natalia",
+  "Edgar",
+  "Diego",
+  "Nicolás",
+  "Marcelo"
+];
+
+ /*Busca usuario dado su nombre */
+
+ let datoABuscar = prompt("Ingrese un nombre");
+
+ let esta = usuariosSimple.includes(datoABuscar);
+
+ if(esta)
+ {
+    alert("USUARIO EXISTE");
+ }
+ else
+ {
+    alert("Usuario no existe");
+ }
+
+ console.log(esta);
+
+ 
+ let posicion = usuariosSimple.indexOf("Diego");
+ console.log(posicion);
+
+
+ const numeros = [1,2,3,4,5,6,7];
+ /*Saber la suma de todos los elementos del array*/
+   let suma=0;
+   for(let i=0; i<numeros.length;i++)
+   {
+      suma+=numero[i];
+   }
+   console.log(suma)//28
+
+
