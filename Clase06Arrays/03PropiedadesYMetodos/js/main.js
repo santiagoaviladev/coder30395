@@ -43,21 +43,51 @@ const misNumeros = [10,9,8,7,6,6,100,200,300,2000,-100,400, 500];
 
 
 //splice
+ const perros = ["budhis", "firulais", "silver", "lucy"];
+ perros.splice(1,2);
+ console.log(perros);
 
 
 //join
-
+const gatos = ["loki", "michi", "ursula", "zuko", "pola"];
+const texto = gatos.join(" ");
+console.log(texto);
 
 //concat
-
+const mascotas = perros.concat(gatos);
+console.log(mascotas);
 
 //slice
+const otrosPerros = ["budhis", "firulais", "silver", "lucy"];
+const nuevoPerros= otrosPerros.slice(1,2);
+console.log(nuevoPerros);
+
 
 
 //indexOf
+let mascotaParaBuscar = prompt("Ingrese su mascota");
+const indice = otrosPerros.indexOf(mascotaParaBuscar);
+if(indice===-1)
+{
+    alert("SU mascota no está con nosotros");
+}
+else{
+    alert("SU mascota  está con nosotros");
+}
 
 
 //includes
+mascotaParaBuscar = prompt("Ingrese su mascota");
+const esta = otrosPerros.includes(mascotaParaBuscar);
+if(esta)
+{
+    alert("SU mascota no está con nosotros");
+}
+else{
+    alert("SU mascota  está con nosotros");
+}
 
 
 //reverse
+mascotas.reverse();
+console.log(mascotas);
