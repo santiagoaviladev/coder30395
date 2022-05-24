@@ -81,19 +81,40 @@ class Tipo {
   /*
   Escriba una función que le permita 'inicializar' el mazo de cartas. 
   Es decir, crear todas las cartas disponibles en el juego: 
-  8 cartas 'toma 2' 
-  8 cartas 'reverse'
-  8 cartas 'salte' 
+  8 cartas 'toma 2' [2 rojas, 2 verdes, 2 azules, 2 amarillas]
+  8 cartas 'reverse' [2 rojas, 2 verdes, 2 azules, 2 amarillas]
+  8 cartas 'salte' [2 rojas, 2 verdes, 2 azules, 2 amarillas]
   4 cartas 'cambie de color'
   4 cartas 'toma 4'
   8 cartas (1-8) para cada color
 
   Sugerencia: Divida la tarea para mayor facilidad: 
-    1. Crear las cartas de colores
+    1. Crear las cartas de colores (2 x num x color)
     2. Crear las cartas especiales (toma 2, reverse, salte), que tienen colores
     3. Crear las cartas de cambie de color
-    4. Creat las cartas de  tome 4
+    4. Crear las cartas de  tome 4
    */
+
+    let indice = 0;
+
+    for(color of colores)
+    {
+
+      for(let i=1; i<=8;i++)
+      {
+         crearCarta(indice,i,color,normal);  
+        indice++;
+       
+        crearCarta(indice,i,color,normal);
+        indice++;
+      }
+    }
+
+    function crearCarta(indice,valor,color,tipo)
+    {
+      let carta = new Carta(indice,valor,color,tipo);
+      mazo.push(carta);
+    }
 
   console.log(mazo);
   
