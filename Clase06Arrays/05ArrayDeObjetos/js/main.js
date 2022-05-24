@@ -13,7 +13,7 @@
     },
     {
         id:3,
-        nombre:"pan",
+        nombre:"whisky",
         precio:200,
 
     }
@@ -22,11 +22,16 @@
 
   console.log(productos);
 
-  for(let i = 0;i<productos.length;i++)
+  //recorrer normal
+  console.log("RECORRER CON FOR")
+  for(let i=0;i<productos.length;i++)
   {
       console.log(productos[i]);
   }
 
-  //Recorrer con of
-  console.log("Recorrer con OF")
-  
+  //FOR OF
+  console.log("RECORRER CON FOR OF")
+  for(let producto of productos)
+  {
+      console.log(producto.nombre);
+  }
