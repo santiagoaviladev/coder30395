@@ -150,17 +150,13 @@
     if(esta)
     {   
         const soloIds = usuarios.map((usuario)=>usuario.id)
-        
-
         let indice = soloIds.indexOf(id);
 
         usuarios.splice(indice,1);
         alert("Usuario borrado");
 
-       console.log("BORRADO");
-       console.table(usuarios);
-
-
+        console.log("BORRADO");
+        console.table(usuarios);
     }
     else
     {
