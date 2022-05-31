@@ -109,22 +109,7 @@ function agregarUsuario()
 
 function listarUsuarios()
 {
-   let miLista = document.querySelector("#listaUsuarios");
-   if(!miLista)
-   {
-     miLista = document.createElement("ul");
-     miLista.setAttribute("id", "listaUsuarios");
-   }
-   miLista.innerHTML="";
-
-   
-   usuarios.forEach((usuario)=>{
-       const nodoli = document.createElement("li");
-       nodoli.innerHTML=`${usuario.nombre} ${usuario.apellido}`;
-       miLista.appendChild(nodoli);
-   });
-
-   document.body.appendChild(miLista);
+  
 }
 
 function eliminarUsuario(){
@@ -202,18 +187,6 @@ function listarNombreMasApellido()
 
 function inicializarAplicacion()
 {
-    const tituloH1 = document.createElement("h1");
-    tituloH1.innerHTML="SISTEMA DE USUARIOS";
-
-    tituloH1.setAttribute("style","color:blue;text-align:center");
-    tituloH1.classList.add("miTitulo");
-    tituloH1.classList.add("miTitulo2");
-
-    document.body.appendChild(tituloH1);
-
-    const subtitulo = document.createElement("p");
-    subtitulo.innerText="Listado de usuarios:";
-
-    document.body.appendChild(subtitulo);
+    
 
 }
