@@ -28,7 +28,7 @@
        miTitulo.innerHTML="HOLA 2";
 
        const misTitulos = document.querySelectorAll(".title");
-       console.log( misTitulos);
+       console.log( misTitulos); // NodeLIst
        
    }
 
