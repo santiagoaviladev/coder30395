@@ -21,9 +21,16 @@
 
    function mostrarUsuario(usuario)
    {
-       
+       const miContenido = document.querySelector("#miContenido");
+       miContenido.innerHTML="HOLA";
+
+       const miTitulo = document.querySelector(".title");
+       miTitulo.innerHTML="HOLA 2";
+
+       const misTitulos = document.querySelectorAll(".title");
+       console.log( misTitulos);
        
    }
 
-   const usuario = crearUsuario();
-   mostrarUsuario(usuario);
+
+   mostrarUsuario(new Usuario("hola", "cacerola", "nd"));

@@ -109,7 +109,17 @@ function agregarUsuario()
 
 function listarUsuarios()
 {
-  
+    const nodoUL = document.createElement("ul"); //"<ul></ul>"
+    usuarios.forEach((usuario)=>{
+
+        const nodoLI = document.createElement("li"); //<li></li>
+        nodoLI.innerText=`${usuario.nombre} ${usuario.apellido}`;
+
+        nodoUL.appendChild(nodoLI);
+    });
+    
+    document.body.appendChild(nodoUL);
+
 }
 
 function eliminarUsuario(){
@@ -188,5 +198,11 @@ function listarNombreMasApellido()
 function inicializarAplicacion()
 {
     
+ 
+    const h1 = document.getElementsByTagName("h1")[0];
+    h1.innerText="¡Bienvenido!";
+
+    const sub = document.getElementById("subtitulo");
+    sub.innerText="SISTEMA DE GESTIÓN DE USUARIOS";
 
 }
