@@ -109,22 +109,17 @@ function agregarUsuario()
 
 function listarUsuarios()
 {
-   let miLista = document.querySelector("#listaUsuarios");
-   if(!miLista)
-   {
-     miLista = document.createElement("ul");
-     miLista.setAttribute("id", "listaUsuarios");
-   }
-   miLista.innerHTML="";
+    const nodoUL = document.createElement("ul"); //"<ul></ul>"
+    usuarios.forEach((usuario)=>{
 
-   
-   usuarios.forEach((usuario)=>{
-       const nodoli = document.createElement("li");
-       nodoli.innerHTML=`${usuario.nombre} ${usuario.apellido}`;
-       miLista.appendChild(nodoli);
-   });
+        const nodoLI = document.createElement("li"); //<li></li>
+        nodoLI.innerText=`${usuario.nombre} ${usuario.apellido}`;
 
-   document.body.appendChild(miLista);
+        nodoUL.appendChild(nodoLI);
+    });
+    
+    document.body.appendChild(nodoUL);
+
 }
 
 function eliminarUsuario(){
@@ -202,18 +197,12 @@ function listarNombreMasApellido()
 
 function inicializarAplicacion()
 {
-    const tituloH1 = document.createElement("h1");
-    tituloH1.innerHTML="SISTEMA DE USUARIOS";
+    
+ 
+    const h1 = document.getElementsByTagName("h1")[0];
+    h1.innerText="¡Bienvenido!";
 
-    tituloH1.setAttribute("style","color:blue;text-align:center");
-    tituloH1.classList.add("miTitulo");
-    tituloH1.classList.add("miTitulo2");
-
-    document.body.appendChild(tituloH1);
-
-    const subtitulo = document.createElement("p");
-    subtitulo.innerText="Listado de usuarios:";
-
-    document.body.appendChild(subtitulo);
+    const sub = document.getElementById("subtitulo");
+    sub.innerText="SISTEMA DE GESTIÓN DE USUARIOS";
 
 }
