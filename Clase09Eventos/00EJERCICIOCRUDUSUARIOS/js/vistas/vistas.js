@@ -32,7 +32,7 @@ function crearMenu() {
                 {
                     btn.addEventListener("click",
                         () => {
-                            listarUsuarios();
+                            listarUsuarios(usuarios);
                         }
                     )
                     break;
@@ -50,7 +50,8 @@ function crearMenu() {
                         btn.addEventListener("click",
                             () => {
                               let encontrados =  buscarUsuario();
-                              console.table(encontrados);
+                              listarUsuarios(encontrados);
+                              console.table();
                             })
                         break;
                     }
@@ -68,7 +69,7 @@ function crearMenu() {
 /*
     Muestra el listado de usuarios del sistema
 */
-function listarUsuarios() {
+function listarUsuarios(miListaDeUsuarios) {
     let miLista = document.querySelector("#listaUsuarios");
     if (!miLista) {
         miLista = document.createElement("table");
@@ -96,7 +97,7 @@ function listarUsuarios() {
 
     miLista.appendChild(encabezado)
 
-    usuarios.forEach((usuario) => {
+    miListaDeUsuarios.forEach((usuario) => {
         const nodotr = document.createElement("tr");
         let nodotd = document.createElement("td");
         nodotd.innerHTML = `${usuario.nombre}`;
@@ -133,7 +134,7 @@ function agregarUsuario() {
 
     usuarios.push(usuario);
     console.table(usuarios);
-    listarUsuarios();
+    listarUsuarios(usuarios);
 }
 
 function buscarUsuario() {
