@@ -112,15 +112,23 @@ function listarUsuarios(miListaDeUsuarios) {
         nodotr.appendChild(nodotd);
 
         nodotd = document.createElement("td");
-        nodotd.innerHTML = `Borrar | Editar`;
+        nodotd.innerHTML = `<button id=${usuario.id}>Borrar</button> | Editar`;
+        
         nodotr.appendChild(nodotd);
-
         miLista.appendChild(nodotr);
     });
 
     document.body.appendChild(miLista);
+    programarEventos();
 }
 
+function programarEventos()
+{
+    usuarios.forEach((element)=>{
+        const btn = document.getElementById(element.id);
+        btn.addEventListener("click", ()=>eliminarUsuario());
+    })
+}
 
 function agregarUsuario() {
     let id = 1;
@@ -147,3 +155,28 @@ function buscarUsuario() {
     return encontrados;
 
 }
+
+
+function eliminarUsuario(){
+
+    let id= Number(prompt("Ingrese el id del usuario que quiere eliminar"));
+ 
+    let encontrado = usuarios.find((usuario)=>usuario.id===id);
+ 
+   if(!encontrado)
+   {
+       alert("Usuario no Encontrado");
+   }
+   else{
+ 
+        let index = usuarios.indexOf(encontrado);
+ 
+        usuarios.splice(index,1);
+ 
+        console.log("Borrar usuario");
+        console.log(usuarios);
+ 
+   }
+    
+ 
+ }

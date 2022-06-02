@@ -88,29 +88,6 @@ function mostrarMenu()
 
 
 
-function eliminarUsuario(){
-
-   let id= Number(prompt("Ingrese el id del usuario que quiere eliminar"));
-
-   let encontrado = usuarios.find((usuario)=>usuario.id===id);
-
-  if(!encontrado)
-  {
-      alert("Usuario no Encontrado");
-  }
-  else{
-
-       let index = usuarios.indexOf(encontrado);
-
-       usuarios.splice(index,1);
-
-       console.log("Borrar usuario");
-       console.log(usuarios);
-
-  }
-   
-
-}
 
 
 
