@@ -15,12 +15,12 @@
  
 
 
-const usuario1 = new Usuario(1, "Ezequiel", "Natale");
-const usuario2 = new Usuario(2, "Roman", "Stoleru");
-const usuario3 = new Usuario(3, "Fernando", "Benitez");
-const usuario4 = new Usuario(4, "Jorge", "Dáttoli");
-const usuario5 = new Usuario(5, "Ivana", "Villanueva");
-const usuario6 = new Usuario(6, "Fabian", "Gutman");
+ const usuario1 = new Usuario(1, "Natalia", "Chiara");
+ const usuario2 = new Usuario(2, "Diego", "Del Hoyo");
+ const usuario3 = new Usuario(3, "Alejandro", "Lombardi");
+ const usuario4 = new Usuario(4, "Diego", "Castro");
+ const usuario5 = new Usuario(5, "Gabriel", "Odirozola");
+ const usuario6 = new Usuario(6, "Juan", "Ferrari");
 
 const usuarios = [usuario1,usuario2,usuario3, usuario4, usuario5, usuario6];
 console.log("INICIAL:", usuarios);
@@ -36,7 +36,7 @@ function mostrarMenu()
    while(opcion!==10)
    {
        opcion = Number( prompt(`Seleccione una acción:
-                           1. Agregar Usuario
+                           1. Agregar Usuario 
                            2. Eliminar Usuario
                            3. Modificar Usuario
                            4. Listar usuarios
