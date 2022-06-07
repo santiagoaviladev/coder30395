@@ -1,7 +1,10 @@
-//SetItem
 
+ const usuario = {
+     id:1,
+     nombre:"Juanito", 
+     apellido: "Gomez",
+ }
 
+ localStorage.setItem("usuario", JSON.stringify(usuario));
 
-//GetItem
-
-
+ console.log(JSON.parse(localStorage.getItem("usuario")));
