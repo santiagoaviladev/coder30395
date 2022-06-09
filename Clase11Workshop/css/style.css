@@ -114,6 +114,7 @@
     width:100%;
     background-color:cornflowerblue;
     color: white;
+    cursor:pointer;
 }
 #cartList {
     width:20%;

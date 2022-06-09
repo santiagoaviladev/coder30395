@@ -1,5 +1,6 @@
 
 let categoriasSistema = [];
+let carrito = new Carrito([]);
 
 initApp();
 
@@ -18,7 +19,7 @@ function loadData() {
 }
 
 function loadCategories() {
-    const categorias = products.map(element =>  element.category);
+    const categorias = products.map(element => element.category);
     const categoriasSet = new Set(categorias);
     const categoriasUnicas = [...categoriasSet];
 
@@ -47,22 +48,21 @@ function showCategories() {
 }
 //Asignación por defecto: 
 //Cuando se invoca sin parámetro, asigna el valor por defecto
-function showProducts(categoryName="") {
-    
+function showProducts(categoryName = "") {
+
     let productsToShow = products;
 
-    if(categoryName!=="")
-    {
+    if (categoryName !== "") {
         productsToShow = products.filter(product => product.category === categoryName);
     }
 
-    
+
     const categoryNode = document.getElementById("categoryName");
     categoryNode.innerText = categoryName.toUpperCase();
 
     /*productList*/
     const productList = document.getElementById("productList")
-    productList.innerHTML="";
+    productList.innerHTML = "";
     productsToShow.forEach(product => {
         const div = document.createElement("div");
         div.classList.add("product");
@@ -80,7 +80,7 @@ function showProducts(categoryName="") {
             </span>
            
         </div>
-        <button class="addToList">
+        <button class="addToList" onclick="addProduct('${product.id}')">
             Agregar al Carrito
         </button>
         `
@@ -89,4 +89,33 @@ function showProducts(categoryName="") {
     })
 
 
+}
+
+function addProduct(idProducto) {
+
+    const producto = products.find(element => element.id == idProducto);
+    carrito.productos.push(producto);
+    showCarrito();
+
+}
+
+function showCarrito() {
+    const divLista = document.getElementById("productsInCart");
+    divLista.innerHTML="";
+    carrito.productos.forEach(product => {
+
+        const nodo = document.createElement("div");
+        nodo.classList.add("productInList");
+        nodo.innerHTML = ` <div class="productImg">
+                            <img src="${product.image}">
+                            </div>
+                            <div class="productName">
+                                ${product.title}
+                            </div>
+                            <div class="producPrice">
+                                <b>$ ${product.price} </b>
+                            </div>`
+         divLista.appendChild(nodo);
+
+    })
 }
