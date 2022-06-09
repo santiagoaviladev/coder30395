@@ -67,12 +67,14 @@
 }
 #categoryMenu{
     border-bottom: 1px solid grey;
-    
     padding-bottom:2%;
 }
 .catBtn{
     border-radius: 20px;
     padding:1%;
+    cursor: pointer;
+    margin-left:2%;
+    text-transform: capitalize;
 }
 
 #productList{
