@@ -11,4 +11,9 @@
  }
  alert(mensaje);
 
+  let mensaje2 = edad>18 ? 
+                 "[T] Puede comprar cerveza" : 
+                 "[T] No puede comprar cerveza";
+  alert(mensaje2);
+
 
