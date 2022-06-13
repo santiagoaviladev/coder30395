@@ -16,6 +16,6 @@
     un mensaje que diga 'Out of Stock' 
 
 
-    Use operadores avanzados para mostrar la información. 
+    Use operadores avanzados para mostrar la información, en donde sea necesario.
        
 */
