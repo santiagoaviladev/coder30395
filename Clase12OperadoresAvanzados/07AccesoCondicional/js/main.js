@@ -10,4 +10,12 @@
 
   let idIngresado = Number(prompt("Ingrese el id que quiere buscar"));
 
- 
+  const buscado = usuarios.find(element=>element.id===idIngresado);
+
+  
+
+  console.log(buscado?.nombre);
+  console.log("DESPUES DE BUSCAR");
+
+  console.log(buscado?.rol?.label);
+  console.log("DESPUES DE BUSCAR ROL");

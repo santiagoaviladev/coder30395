@@ -64,16 +64,17 @@ function showProducts(categoryName = "") {
     const productList = document.getElementById("productList")
     productList.innerHTML = "";
     productsToShow.forEach(product => {
+        const {image, title, price} = product
         const div = document.createElement("div");
         div.classList.add("product");
-        div.innerHTML = `<img src="${product.image}">
+        div.innerHTML = `<img src="${image}">
         <div class="productInfo">
             <div class="productName">
-               ${product.title}
+               ${title}
             </div>
             <br>
             <span class="productPrice">
-                Price:<b> $${product.price} </b>
+                Price:<b> $${price} </b>
             </span> /
             <span class="productRate">
                 Rate: <b> ${product.rating.rate} </b>
