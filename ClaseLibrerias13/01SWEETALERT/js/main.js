@@ -6,9 +6,28 @@ function init() {
     alertSinBotonDeConfirmacion();
     alertConImagenes();
     alertConEventos();
+    ejercicioPedirDatos();
 
 }
 
+function ejercicioPedirDatos()
+{
+    const boton = document.getElementById("btnSweet5");
+    boton.addEventListener("click", () => {
+
+        let nombre = prompt("Ingresa tu nombre")
+
+        Swal.fire({
+            title: `¡Hola, ${nombre}!`,
+            text: 'Esto es un saludo con Sweet Alert',
+            icon: 'success',
+            confirmButtonText: '¡Está muy Piola!',
+        })
+
+
+    })
+
+}
 function saludarConSweetAlert() {
 
     const boton = document.getElementById("btnSweet");
