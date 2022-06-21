@@ -1,7 +1,9 @@
 console.log("Hola");
 console.log("Hola 2");
 console.log("Hola 3");
-mostrarDatos();
+setTimeout(()=>{
+    mostrarDatos();
+},1000)
 console.log("Hola 7");
 console.log("Hola 8");
 console.log("Hola 9");
