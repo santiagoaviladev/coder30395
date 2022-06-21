@@ -19,7 +19,7 @@ const pedirUsuarios = (res) => new Promise((resolve, reject)=>{
 
     if(res===true)
     {
-        resolve(usuarios)
+       
     }
     else
     {
