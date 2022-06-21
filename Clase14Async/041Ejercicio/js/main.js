@@ -19,7 +19,7 @@ const pedirUsuarios = (res) => new Promise((resolve, reject)=>{
 
     if(res===true)
     {
-       
+       resolve(usuarios)
     }
     else
     {
@@ -28,4 +28,10 @@ const pedirUsuarios = (res) => new Promise((resolve, reject)=>{
 
 })
 
- 
+const value = prompt("Ingrese resultado:")
+const resDeUsuario = value ==1 ? true : false;
+
+ pedirUsuarios(resDeUsuario).
+ then((res)=>console.log(res)).
+ catch((error)=> console.log(error)).
+ finally(()=>console.log("GRACIAS POR USUAR NUESTRO SERVICIO")) 
