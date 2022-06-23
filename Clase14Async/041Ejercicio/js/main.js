@@ -35,3 +35,8 @@ const resDeUsuario = value ==1 ? true : false;
  then((res)=>console.log(res)).
  catch((error)=> console.log(error)).
  finally(()=>console.log("GRACIAS POR USUAR NUESTRO SERVICIO")) 
+
+
+ fetch('https://api.mercadolibre.com/sites/MLA/search?category=MLA1055').
+ then((res)=>res.json())
+ .then((json)=>console.log(json.results))
